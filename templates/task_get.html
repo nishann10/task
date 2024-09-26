@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>task's table</h1>
+    <table border="2">
+         <tr>
+            <th>title</th>
+            <th>description</th>
+            <th>completed</th>
+            <th>created_at</th>
+            <th>updated</th>
+            <th>delete</th>
+         </tr>
+         {% for i in a %}
+         <tr>
+            <td>{{i.title}}</td>
+            <td>{{i.description}}</td>
+            <td>{{i.completed}}</td>
+            <td>{{i.created}}</td>
+            <td><a href="/taskupdated/{{i.title}}">updated</a></td>
+            <td><a href="/taskdelete/{{i.title}}">delete</a></td>
+         </tr>
+         {% endfor %}
+    </table>
+</body>
+</html>
