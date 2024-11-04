@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>book model's table</h1>
+    <table border="2">
+        <tr>
+            <th>book name</th>
+            <th>auther</th>
+            <th>published date</th>
+            <th>delete</th>
+        </tr>
+        {% for i in a %}
+        <tr>
+           <td>{{i.title}}</td>
+           <td>{{i.auther1}}</td>
+           <td>{{i.published_date}}</td>
+           <td><a href="/book1dlt/{{i.title}}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

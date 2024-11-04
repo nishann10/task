@@ -1,0 +1,32 @@
+<!-- user_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="{% static 'css/footballform.css' %}"> <!-- Adjust this path as needed -->
+</head>
+<body>
+    <div class="container">
+        <h1>Add User</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="club">Club:</label>
+                <input type="text" id="club" name="club" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+            </div>
+            <button type="submit" class="submit-button">Add User</button>
+        </form>
+    </div>
+</body>
+</html>

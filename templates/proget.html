@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>title</th>
+            <th>action</th>
+        </tr>
+        {% for x in my %}
+        <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.project_name}}</td>
+            <td>{{x.project_title}}</td>
+            <td><a href="update/{{x.product_name}}">update</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>

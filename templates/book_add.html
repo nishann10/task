@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="fname">book</label><br>
+        <input type="text" id="fname" name="id"><br><br>
+        <label for="lname">book name</label><br>
+        <input type="text" id="lname" name="name"><br><br>
+        <label for="user_id">user:</label><br>
+        <select name="user_id" >
+            {% for x in a %}
+        <option value="{{x.user_id}}">{{x.user_name}}</option>
+        {% endfor %}
+        </select><br><br>
+        <button type="submit">submit</button>
+      </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Media</title>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="id_field">ID</label><br>
+        <input type="text" id="id_field" name="id" required><br><br>
+
+        <label for="name_field">Name</label><br>
+        <input type="text" id="name_field" name="name" required><br><br>
+
+        <label for="image_field">Image</label><br>
+        <input type="file" id="image_field" name="image" accept="image/*" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

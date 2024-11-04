@@ -1,0 +1,23 @@
+<!-- templates/show_data.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Data</title>
+    <link rel="stylesheet" href="{% static 'css/mediafiles.css' %}">
+</head>
+<body>
+    <h1>Data List</h1>
+    <div class="data-container">
+        {% for i in a %}
+            <div class="data-item">
+                <h2>{{ i.title }}</h2>
+                <img src="{{ i.file.url }}" alt="{{ i.title }}" style="max-width: 300px;">
+                <p>{{ i.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

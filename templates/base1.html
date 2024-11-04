@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>base1 document</title>
+    <link rel="stylesheet" href="{% static 'css/base1.css' %}">
+</head>
+<body>
+    <header>
+        <h1>
+            home page
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="/home1">home</a></li>
+                <li><a href="/about1">about</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    <footer>
+        <p>copyright-hgrffnlaek kljfklwflk weljkkl</p>
+    </footer>
+</body>
+</html>

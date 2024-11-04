@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}first web{% endblock %}</title>
+</head>
+<body>
+    <h1>sub classes</h1>
+    <nav>
+        <ul>
+            <li><a href="/home">home</a></li>
+            <li><a href="/about">about</a></li>
+            <li><a href="/contact">contact</a></li>
+        </ul>
+    </nav>
+    <main>
+       {% block content %}
+       
+       {% endblock %}
+    </main>
+    <footer>
+        <p>first webpage loading</p>
+    </footer>
+</body>
+</html>

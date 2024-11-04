@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'css/login1home.css' %}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="{% url 'logoutlogout' %}">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Home Page Content</h2>
+        <p>This is where you can add your main content.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Website Name. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

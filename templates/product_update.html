@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        {% for i in a %}
+        <label for="fname">product name</label><br>
+        <input type="text" name="name" value="{{i.product_name}}"><br><br>
+        <label for="lname">product price</label><br>
+        <input type="text"  name="price" value="{{i.product_price}}"><br><br>
+        <label for="date">created at</label><br>
+        <input type="date"  name="created" value="{{i.created_at|date:'Y-m-d'}}"><br><br>
+        <button type="submit">submit</button>
+        {% endfor %}
+      </form>
+</body>
+</html>

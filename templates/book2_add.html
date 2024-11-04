@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="fname">title</label><br>
+        <input type="text" id="fname" name="book_title"><br><br>
+        <label for="fname">published date</label><br>
+        <input type="date" id="fname" name="book_date"><br><br>
+        <label for="auther_id">auther</label><br>
+        <select name="aut">
+        {% for i in a %}   
+        <option value="{{i.auther_id}}">{{i.name}}</option> 
+        {% endfor %}  
+        </select><br><br>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

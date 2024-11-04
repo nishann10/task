@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div class="user-card">
+        {% for i in user %}
+        <img style="height: 300px;width: 300px;" src="{{ i.image.url }}" alt="{{ i.name }}" class="user-image">
+        <div class="user-details">
+            <h2 class="user-name">{{ i.name }}</h2>
+            <p class="user-club">{{ i.club }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th>first name</th>
+            <th>last name</th>
+            <th>e-mail</th>
+            <th>phone number</th>
+            <th>course</th>
+            <th>update</th>
+            <th>delete</th>
+        </tr>
+        {% for i in a %}
+        <tr>
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.course}}</td>   
+            <td><a href="/scupdate/{{i.id}}">update</a></td>
+            <td><a href="/scdelete/{{i.id}}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'scget' %}">click here</a>
+</body>
+</html>

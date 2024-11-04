@@ -1,0 +1,19 @@
+{% extends "base1.html" %}
+{% block title %}home - base1 document{% endblock %}
+
+{% block content %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <label for="fname">title</label><br>
+        <input type="text" id="fname" name="block_title"><br><br>
+        <label for="fname">content</label><br>
+        <input type="text" id="fname" name="block_content"><br><br>
+        <label for="fname">created</label><br>
+        <input type="date" id="fname" name="block_created"><br><br>
+        <label for="fname">updated</label><br>
+        <input type="date" id="fname" name="block_updated"><br><br>
+        <button type="submit">submit</button>
+    </form>
+
+  {% endblock %}  

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Cards</title>
+    <link rel="stylesheet" href="{% static 'css/media1.css' %}"> <!-- Link to the CSS file -->
+</head>
+<body>
+    {% for i in a %}
+    <div class="card">
+        {% if i.user_image %}
+            <img src="{{ i.user_image.url }}" alt="User Image" class="card-image">
+        {% else %}
+            <img src="{% static 'images/default_user.png' %}" alt="Default Image" class="card-image"> <!-- Use a default image -->
+        {% endif %}
+        <div class="card-info">
+            <p>ID: {{ i.user_id }}</p>
+            <h2>Name: {{ i.user_name }}</h2>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>

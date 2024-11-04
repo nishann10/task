@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="fname">text</label><br>
+        <input type="text" id="fname" name="media_title"><br><br>
+        <label for="fname">image</label><br>
+        <input type="file" id="fname" name="media_image"><br><br>
+        <label for="fname">description</label><br>
+        <input type="text" id="fname" name="media_description"><br><br>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

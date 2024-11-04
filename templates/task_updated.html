@@ -8,17 +8,15 @@
 <body>
     <form method="POST">
         {% csrf_token %}
-        {% for i in a %}
         <label for="fname">title</label><br>
-        <input type="text" id="fname" name="title_name" value="{{i.title}}"><br><br>
+        <input type="text" id="fname" name="title_name" value="{{a.title}}"><br><br>
         <label for="lname">description</label><br>
-        <input type="text" id="lname" name="description_name" value="{{i.description}}"><br><br>
+        <input type="text" id="lname" name="description_name" value="{{a.description}}"><br><br>
         <label for="fname">completed</label><br>
-        <input type="text" id="fname" name="completed_name" value="{{i.completed}}"><br><br>
+        <input type="text" id="fname" name="completed_name" value="{{a.completed}}"><br><br>
         <label for="fname">created_at</label><br>
-        <input type="text" id="fname" name="created_name" value="{{i.created|date:'Y-m-d'}}"><br><br>
+        <input type="text" id="fname" name="created_name" value="{{a.created|date:'Y-m-d'}}"><br><br>
         <button type="submit">submit</button>
-        {% endfor %}
       </form>
       
 </body>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login1.css' %}">
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">submit</button> 
+        <div>
+            {% if form.password.errors %}
+                <div style="color: red;">{{ form.password.errors }}</div>
+            {% endif %}
+        </div>
+    </form>
+</body>
+</html>
